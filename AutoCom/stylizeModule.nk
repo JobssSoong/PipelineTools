@@ -1,0 +1,374 @@
+set cut_paste_input [stack 0]
+version 12.1 v3
+BackdropNode {
+ inputs 0
+ name bd_big
+ label "Stylize Module\n"
+ note_font "Verdana Bold Italic"
+ note_font_size 100
+ selected true
+ xpos -451
+ ypos 2998
+ appearance Border
+ border_width 10
+ bdwidth 1450
+ bdheight 819
+ z_order -1
+}
+BackdropNode {
+ inputs 0
+ name bd_black_prev
+ tile_color 0xaf974dff
+ label "Black  Prev"
+ note_font "Verdana Bold"
+ note_font_size 60
+ selected true
+ xpos -347
+ ypos 3260
+ bdwidth 368
+ bdheight 176
+}
+BackdropNode {
+ inputs 0
+ name bd_bloom
+ tile_color 0x82a588ff
+ label Bloom
+ note_font "Verdana Bold"
+ note_font_size 60
+ selected true
+ xpos -348
+ ypos 3497
+ bdwidth 370
+ bdheight 244
+}
+BackdropNode {
+ inputs 0
+ name bd_style
+ tile_color 0x5371adff
+ label "Edge/Paint Stylize\n"
+ note_font "Verdana Bold"
+ note_font_size 60
+ selected true
+ xpos 75
+ ypos 3304
+ bdwidth 818
+ bdheight 433
+}
+BackdropNode {
+ inputs 0
+ name bd_read_edge
+ tile_color 0x64876bff
+ label "E I\nD N\nG\nE"
+ note_font "Verdana Bold"
+ note_font_size 60
+ selected true
+ xpos 655
+ ypos 3343
+ bdwidth 233
+ bdheight 325
+ z_order 1
+}
+Read {
+ inputs 0
+ file_type jpeg
+ file D:/Work/Modelwork/JianBT/edge.jpg
+ format "1080 1080 0 0 1080 1080 1 "
+ origset true
+ version 1
+ name read_edge
+ selected true
+ xpos 764
+ ypos 3393
+}
+RotoPaint {
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097664}
+    {t x44070000 x44070000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {layer Layer1
+     {f 2097664}
+     {t x44070000 x44070000}
+     {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}}}}}}
+ toolbox {dodge {
+  { selectAll r 0 g 0 b 0 bm 6 src 1 str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 tt 5 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 tt 6 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 tt 7 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 tt 8 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { addPoints str 1 ssx 1 ssy 1 sf 1 }
+  { brush r 0 g 0 b 0 a 0 str 1 ssx 1 ssy 1 sf 1 sb 1 tt 17 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 tt 18 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge r 0 g 0 b 0 src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 tt 21 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 tt 22 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_blending_mode color-dodge
+ toolbar_paint_color {0 0 0 1}
+ toolbar_brush_hardness 0.200000003
+ toolbar_lifetime_type single
+ toolbar_paint_source fg
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {1024 778}
+ color {0 0 0 1}
+ colorOverlay {0 0 0 0}
+ paint_source foreground
+ blending_mode color-dodge
+ view {}
+ motionblur_on true
+ brush_spacing 0.05000000075
+ brush_hardness 0.200000003
+ source_black_outside true
+ name ep_RotoPaint
+ selected true
+ xpos 764
+ ypos 3528
+}
+Grade {
+ multiply 0.66
+ add 0.005
+ name ep_Grade3
+ selected true
+ xpos 764
+ ypos 3552
+}
+Blur {
+ size 1
+ name ep_Blur2
+ selected true
+ xpos 764
+ ypos 3576
+}
+Dot {
+ name ep_d2
+ selected true
+ xpos 798
+ ypos 3630
+}
+push $cut_paste_input
+Dot {
+ name input
+ selected true
+ xpos -254
+ ypos 3030
+}
+Dot {
+ name sm_d1
+ selected true
+ xpos -254
+ ypos 3239
+}
+Dot {
+ name black_prev_d1
+ selected true
+ xpos -254
+ ypos 3335
+}
+set Nc95ec000 [stack 0]
+Dot {
+ name black_prev_d2
+ selected true
+ xpos -93
+ ypos 3335
+}
+add_layer {shadow_matte shadow_matte.red shadow_matte.green shadow_matte.blue shadow_matte.alpha}
+Shuffle2 {
+ fromInput1 {{0} B}
+ in1 shadow_matte
+ fromInput2 {{0} B}
+ mappings "4 shadow_matte.red 0 0 rgba.red 0 0 shadow_matte.green 0 1 rgba.green 0 1 shadow_matte.blue 0 2 rgba.blue 0 2 shadow_matte.alpha 0 3 rgba.alpha 0 3"
+ name black_prev_shuffle
+ selected true
+ xpos -127
+ ypos 3377
+}
+push $Nc95ec000
+Grade {
+ blackpoint -0.012
+ whitepoint 0.48
+ black -0.004
+ white 0.84
+ multiply {0.85 1 1.15 1}
+ multiply_panelDropped true
+ add -0.001
+ gamma 0.84
+ name black_prev_main
+ selected true
+ xpos -288
+ ypos 3353
+}
+Grade {
+ inputs 1+1
+ blackpoint {-0.001 0 0.001 0}
+ blackpoint_panelDropped true
+ black 0.006
+ gamma 1.12
+ name black_prev_shadow
+ selected true
+ xpos -288
+ ypos 3377
+}
+Dot {
+ name sm_d2
+ selected true
+ xpos -254
+ ypos 3452
+}
+Dot {
+ name bloom_d1
+ selected true
+ xpos -254
+ ypos 3594
+}
+set N9998c800 [stack 0]
+Dot {
+ name bloom_d2
+ selected true
+ xpos -93
+ ypos 3594
+}
+Dot {
+ name bloom_d3
+ selected true
+ xpos -93
+ ypos 3626
+}
+set N9998c000 [stack 0]
+Shuffle2 {
+ fromInput1 {{0} B}
+ in1 shadow_matte
+ fromInput2 {{0} B}
+ mappings "4 shadow_matte.red 0 0 rgba.red 0 0 shadow_matte.green 0 1 rgba.green 0 1 shadow_matte.blue 0 2 rgba.blue 0 2 shadow_matte.alpha 0 3 rgba.alpha 0 3"
+ name bloom_Shuffle
+ selected true
+ xpos -127
+ ypos 3647
+}
+set Nccbcfc00 [stack 0]
+Dot {
+ name bloom_d4
+ selected true
+ xpos -93
+ ypos 3695
+}
+push $Nccbcfc00
+push $N9998c000
+push $N9998c800
+Glow2 {
+ inputs 1+1
+ tint 0.245
+ size 15.5
+ name bloom_Glow1
+ selected true
+ xpos -288
+ ypos 3623
+}
+Glow2 {
+ inputs 1+1
+ tint 0.16
+ size 43
+ invert_mask true
+ name bloom_Glow2
+ selected true
+ xpos -288
+ ypos 3647
+}
+Convolve2 {
+ inputs 2
+ mix 0.02
+ name bloom_Convolve
+ selected true
+ xpos -288
+ ypos 3687
+}
+Dot {
+ name sm_d3
+ selected true
+ xpos -254
+ ypos 3759
+}
+Dot {
+ name sm_d4
+ selected true
+ xpos 52
+ ypos 3759
+}
+Dot {
+ name sm_d5
+ selected true
+ xpos 52
+ ypos 3457
+}
+Grade {
+ name ep_Grade1
+ selected true
+ xpos 272
+ ypos 3454
+}
+Dilate {
+ size 1
+ mix 0.977
+ name ep_Dilate
+ selected true
+ xpos 272
+ ypos 3478
+}
+set Nccbce000 [stack 0]
+Dot {
+ name ep_d1
+ selected true
+ xpos 146
+ ypos 3486
+}
+Blur {
+ size 9.2
+ name ep_Blur1
+ selected true
+ xpos 112
+ ypos 3593
+}
+Grade {
+ black -0.0001
+ multiply {0.75 1 1.25 1}
+ multiply_panelDropped true
+ add 0.08
+ gamma 1.38
+ name ep_Grade2
+ selected true
+ xpos 112
+ ypos 3627
+}
+push $Nccbce000
+Merge2 {
+ inputs 2+1
+ operation atop
+ maskChannelMask rgba.red
+ mix 0.815
+ name ep_Merge
+ selected true
+ xpos 272
+ ypos 3627
+}
+Sharpen {
+ minimum 0.06
+ amount 0.28
+ size 3.1
+ name ep_Sharpen
+ selected true
+ xpos 272
+ ypos 3688
+}
+Dot {
+ name output
+ selected true
+ xpos 1071
+ ypos 3696
+}

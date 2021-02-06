@@ -109,4 +109,5 @@ class SubmitterUI(QtWidgets.QMainWindow, submitter_widgets.Ui_MainWindow):
 def main():
     wnd = SubmitterUI()
     wnd.show()
+
     return wnd
